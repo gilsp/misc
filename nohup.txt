@@ -1,0 +1,11 @@
+ssh ...
+
+nohup hive -f temp.sql > out.csv 2> info.log &
+nohup presto -f temp.sql --output-format CSV_HEADER > out.csv 2> info.log
+
+hive
+
+show databases;
+use database_x;
+show tables;
+desc table_x;
